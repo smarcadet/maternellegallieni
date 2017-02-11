@@ -1,12 +1,12 @@
 {
-  "name": "garden-starterkit",
-  "homepage": "https://github.com/cleverage/garden-starter-kit",
-  "title": "Garden Starter Kit",
-  "description": "Set de base pour les projets Garden statiques.",
-  "version": "2.0.0-beta5",
+  "name": "maternellegallieni",
+  "homepage": "https://github.com/smarcadet/maternellegallieni",
+  "title": "Maternelle Gallieni",
+  "description": "Site pour l'école maternelle Gallieni de Nogent sur Marne",
+  "version": "1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cleverage/garden-starter-kit.git"
+    "url": "https://github.com/smarcadet/maternellegallieni.git"
   },
   "dependencies": {
     "autoprefixer": "6.5.4",
