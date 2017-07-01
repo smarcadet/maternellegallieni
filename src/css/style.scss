@@ -7,67 +7,9 @@ Author: Stéphane Marcadet
 Template: period
 */
 
-// Ajouter vos style SCSS ici
-// --------------------------
-
-/// Générez un guide des styles
- //
- // Si vous commentez votre code en utilisant la syntaxe
- // [KSS](https://github.com/kss-node/kss/blob/spec/SPEC.md),
- // le Starter Kit generera un guide des styles dans la
- // documentation a chaque build du projet.
- //
- // Styleguide Introduction
-
-
-/// Une palette de couleur
- //
- // Si vous voulez documenter des couleurs, vous pouvez
- // le faire de cette manière grace au block Colors.
- //
- // Colors:
- // denim          : #1e5bc6
- // flamingo       : #f15145
- // alert          : #f33121 - red for error
- // $color-black   : #000    - real black
- //
- // Styleguide Introduction.Couleur
-
-/// Font d’icon Fontello
- //
- // De la même façon que pour les fonts grace au block
- // Icons vous pouvez documenter les icons de la font.
- //
- // Implique que la font d'icon se nomme fontello
- // Sinon il faut changer celle-ci dans doc.scss
- //
- // Icons:
- // left    : ←
- // up      : ↑
- // right   : →
- // down    : ↓
- // comment : 💬 - bulle
- //
- // Styleguide Introduction.Icons
-
-
-/// Exemple UI
- //
- // Markup: ../html/partials/_exemple.twig
- //
- // Styleguide Introduction.UI
-
-/// SVG
- //
- // Markup:
- // <svg style="height:120px;width:120px;fill:#000">
- //   <use xlink:href="#symbol-fish"/>
- // </svg>
- //
- // Styleguide Introduction.Svg
-
 $primary: #FF6138;
-$secondary: #00A388;
+$secondary: #85b40b;
+$light_blue: #e1f6ff;
 $white: #fff;
 
 .site-title {
@@ -78,7 +20,7 @@ $white: #fff;
 .site-header {
   position: relative;
   background-color: transparent;
-  background: url('src/assets/img/header.jpg') no-repeat top left;
+  padding: 0;
 
   &:before {
     content: '';
@@ -91,6 +33,70 @@ $white: #fff;
     bottom: 0;
     z-index: -1;
   }
+}
+
+.title-container {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.mg-header-logo {
+  background: url('src/assets/img/header.jpg') no-repeat top left;
+  min-height: 447px;
+}
+
+.mg-header-logo-img {
+  margin-left: 52px;
+  margin-top: 10px;
+}
+
+.mg-header-infos {
+  position: absolute;
+  bottom: 23px;
+  left: 110px;
+  font-size: 20px;
+  line-height: 1.3;
+  max-width: 450px;
+
+  a {
+    color: $white;
+  }
+}
+
+.mg-header-infos-address {
+  float: left;
+  width: 50%;
+  margin: 0;
+
+  span {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  strong {
+    font-style: italic;
+  }
+}
+
+.mg-header-infos-number {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.mg-header-infos-mail {
+  font-size: .85em;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.menu-primary-container {
+  margin-bottom: 0;
+}
+
+.menu-primary {
+  background-color: $light_blue;
+  position: relative;
+  z-index: 10;
 }
 
 .home .post {
