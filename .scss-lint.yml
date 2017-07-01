@@ -38,7 +38,7 @@ linters:
   # On ne veux pas garder de commentaires (`/* */`) dans nos CSS générés,
   # Pour garantir ça, on force l'usage des commentaire Sass (`//`)
   Comment:
-    enabled: true
+    enabled: false
 
   # https://github.com/causes/scss-lint/blob/master/lib/scss_lint/linter/compass/README.md
   # Même si l'on utilise compass, dans la mesure ou nous utilisons autoprefixer

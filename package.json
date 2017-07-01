@@ -3,7 +3,7 @@
   "homepage": "https://github.com/smarcadet/maternellegallieni",
   "title": "Maternelle Gallieni",
   "description": "Site pour l'école maternelle Gallieni de Nogent sur Marne",
-  "version": "1.0",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/smarcadet/maternellegallieni.git"
@@ -23,11 +23,9 @@
     "gulp-concat": "2.6.1",
     "gulp-if": "2.0.2",
     "gulp-imagemin": "3.1.1",
-    "gulp-less": "3.3.0",
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "6.2.0",
     "gulp-sourcemaps": "2.2.0",
-    "gulp-stylus": "2.6.0",
     "gulp-svgstore": "6.0.0",
     "gulp-uglify": "2.0.0",
     "gulp-util": "3.0.7",
@@ -55,23 +53,18 @@
     "gulp-help": "1.6.1",
     "gulp-jscs": "4.0.0",
     "gulp-jshint": "2.0.4",
-    "gulp-lesshint": "2.1.0",
     "gulp-markdown": "1.2.0",
     "gulp-newer": "1.3.0",
     "gulp-prompt": "0.2.0",
     "gulp-rename": "1.2.2",
     "gulp-scss-lint": "0.4.0",
     "gulp-sftp": "0.1.5",
-    "gulp-stylint": "4.0.0",
     "gulp-twig": "0.7.0",
     "highlight.js": "9.9.0",
     "jshint": "2.9.4",
     "jshint-stylish": "2.2.1",
     "kss": "3.0.0-beta.15",
     "nproxy": "stephane-tessier/nproxy#1.7.1"
-  },
-  "scripts": {
-    "install": "bundle install --path .gems"
   },
   "engines": {
     "node": ">= 5.0.3",

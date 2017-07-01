@@ -1,4 +1,12 @@
 @charset "UTF-8";
+
+/*
+Theme Name: maternellegallieni
+Description: theme du site de l'école maternelle Gallieni de Nogent sur Marne
+Author: Stéphane Marcadet
+Template: period
+*/
+
 // Ajouter vos style SCSS ici
 // --------------------------
 
@@ -58,6 +66,62 @@
  //
  // Styleguide Introduction.Svg
 
-body {
-  font: 1em sans-serif;
+$primary: #FF6138;
+$secondary: #00A388;
+$white: #fff;
+
+.site-title {
+  font-size: 64px;
+  text-transform: uppercase;
 }
+
+.site-header {
+  position: relative;
+  background-color: transparent;
+  background: url('src/assets/img/header.jpg') no-repeat top left;
+
+  &:before {
+    content: '';
+    background-color: $secondary;
+    opacity: .9;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+
+.home .post {
+  width: 48%;
+  float: left;
+}
+
+.category .post {
+  width: 100%;
+}
+
+.post:first-child {
+  width: 100%;
+}
+
+.post:last-child {
+  float: right;
+}
+
+.mg-bloc {
+  background-color: $white;
+}
+
+
+// to ensure that is only one post author and original one, not the modifier.
+.post-byline > * {
+  display: none;
+}
+
+.post-byline > span:last-of-type,
+.post-byline > a:last-of-type {
+  display: inline;
+}
+
