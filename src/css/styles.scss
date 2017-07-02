@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/*
+Theme Name: maternellegallieni
+Description: theme du site de l'école maternelle Gallieni de Nogent sur Marne
+Author: Stéphane Marcadet
+Template: period
+*/
+
+// Helpers
+@import '_helpers/helpers';
+
+// Config
+@import '_config/prefix';
+@import '_config/mq';
+@import '_config/helpers-settings';
+// @import '_config/grid-settings';
+@import '_config/fonts';
+
+// Layout
+// @import '_layout/grid';
+@import '_layout/container';
+
+// Partials wrap with project prefix
+.#{$prefix} {
+  // Layout
+  @import '_layout/zindex';
+
+  // Project
+  // Atoms
+  @import '_project/atoms/cta';
+  @import '_project/atoms/link';
+
+  // Organims
+  @import '_project/organisms/header';
+}

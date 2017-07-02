@@ -1,0 +1,50 @@
+
+/// Grid
+ //
+ // Grid config : columns 12
+ //
+ // |         | from XS  | from S  | from M | from L | from XL | from XXL |
+ // |:--------|---------:|--------:|--------:|-------:|-------:|--------:|
+ // | target  |    320px |   768px | 1024px  | 1080px | 1280px |  1366px |
+ // | gutter  |     12px |    16px |   16px  |   10px |   16px |    30px |
+ // | margin  |     16px |    30px |   44px  |   30px |   40px |    40px |
+ //
+ // Styleguide Config.Grid
+
+$grid-cols: 12;
+
+$gutter-width: 1rem;
+$outer-margin: 2rem;
+
+$gutter-compensation: calc((#{$gutter-width} * .5) * -1);
+$half-gutter-width: calc(#{$gutter-width} * .5);
+
+$container-s: calc(#{map-get($mq-breakpoints, S)} + #{$gutter-width});
+$container-m: calc(#{map-get($mq-breakpoints, M)} + #{$gutter-width});
+$container-l: calc(#{map-get($mq-breakpoints, L)} + #{$gutter-width});
+
+// $grid-cols: 12;
+
+// // 320
+// $grid-from-xs-gutter: 12px;
+// $grid-from-xs-margin: 16px + ($grid-from-xs-gutter/2);
+
+// // 768
+// $grid-from-s-gutter:  16px;
+// $grid-from-s-margin:  30px + ($grid-from-s-gutter/2);
+
+// // 1024
+// $grid-from-m-gutter:  16px;
+// $grid-from-m-margin:  44px + ($grid-from-m-gutter/2);
+
+// //
+// $grid-from-l-gutter:   10px;
+// $grid-from-l-margin:   30px + ($grid-from-m-gutter/2);
+
+// // 1280
+// $grid-from-xl-gutter:   16px;
+// $grid-from-xl-margin:   40px + ($grid-from-l-gutter/2);
+
+// // 1366
+// $grid-from-xxl-gutter:  30px;
+// $grid-from-xxl-margin:  40px + ($grid-from-xl-gutter/2);

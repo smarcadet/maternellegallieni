@@ -1,0 +1,22 @@
+.primary-container {
+  padding: 0 rem(40px);
+  margin: 0 auto;
+  min-height: 0;
+  max-width: 1280px;
+
+  .main {
+    width: rem(780px);
+  }
+
+  .sidebar-primary {
+    width: rem(382px);
+  }
+}
+
+.menu-container {
+  padding: 0 rem(40px);
+}
+
+.sidebar-primary {
+  margin-top: 0;
+}

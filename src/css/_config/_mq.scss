@@ -1,0 +1,31 @@
+/// Media queries
+ //
+ // Config of _Sass-mq_
+ // https://github.com/sass-mq/sass-mq
+ //
+ // Breakpoint:
+ // * XS  : 441px
+ // * S   : 780px
+ // * M   : 1025px
+ // * L   : 1200px
+ // * XL  : 1300px
+ // * XXL : 1500px
+ //
+ // Mediaqueries:
+ // * from: S
+ // * from: XS
+ // * from: M
+ // * from: L
+ // * from: XL
+ // * from: XXL
+ //
+ // StyleGuide Config.Media-queries
+
+$mq-breakpoints: (
+  XS: 441px,
+  S:  780px,
+  M:  1025px,
+  L:  1280px,
+  XL:  1300px,
+  XXL: 1500px
+);

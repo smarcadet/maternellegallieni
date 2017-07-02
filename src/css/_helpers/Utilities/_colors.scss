@@ -1,0 +1,84 @@
+/// Colors
+ //
+ // Instead, pick the color name and call it with the function color(). e.g. `background-color: color(thunder);`
+ //
+ // If you need inspiration, use http://chir.ag/projects/name-that-color/ to name your colors.
+ //
+ // Styleguide Config.Colors
+
+/// Colors of theme
+ //
+ // Those colors are from styleguide given by Publicis.
+ //
+ // Colors:
+ // japlaurel      : #2d7a00
+ // limeade        : #3eaa00
+ // fuego          : #b0ef09
+ // conifer        : #bae546
+ // chiffon        : #f1fecf
+ // chathams       : #18506c
+ // calypso        : #347291
+ // picton         : #52b4e6
+ // regent         : #a5d1e8
+ // frenchpass     : #b5e6ff
+ // hawkes         : #dbf1fd
+ // linkwater      : #daedf5
+ // lilywhite      : #e5f6ff
+ //
+ // Weight: -10
+ //
+ // Styleguide Config.Colors.wheel
+
+/// Grey colors
+ //
+ // Colors:
+ // codgray          : #1d1918
+ // tundora          : #414141
+ // scorpion         : #595959
+ // wildsand         : #f4f4f4
+ //
+ // Weight: 10
+ //
+ // Styleguide Config.Colors.grey
+
+
+// Because Scss Linter doesn't see Sass lists as variable…
+// scss-lint:disable ColorVariable
+$colors: (
+  japlaurel      : #2d7a00,
+  limeade        : #3eaa00,
+  fuego          : #b0ef09,
+  conifer        : #bae546,
+  chiffon        : #f1fecf,
+  chathams       : #18506c,
+  calypso        : #347291,
+  picton         : #52b4e6,
+  regent         : #a5d1e8,
+  frenchpass     : #b5e6ff,
+  hawkes         : #dbf1fd,
+  linkwater      : #daedf5,
+  lilywhite      : #e5f6ff,
+
+  // Grey colors
+  codgray          : #1d1918,
+  tundora          : #414141,
+  scorpion         : #595959,
+  wildsand         : #f4f4f4
+);
+
+// Function to easily get color names
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+// dynamic class generation from $colors. this pattern : .color_{name} : {value};
+@each $i in $colors {
+  .mg-color_#{nth($i, 1)} {
+    color: nth($i, 2);
+  }
+}

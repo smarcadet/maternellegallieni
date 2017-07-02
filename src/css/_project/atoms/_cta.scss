@@ -1,0 +1,169 @@
+/// CTA
+ //
+ // (Call to action)
+ //
+ // .mg-cta--green - green variant
+ // .mg-cta--darkGreen - darker green variant
+ //
+ // markup:
+ // <button class="mg-cta {{modifier_class}}">Button</button>
+ // <a href="#" class="mg-cta {{modifier_class}}">Link</a>
+ // <input type="submit" class="mg-cta {{modifier_class}}" value="Input[type=submit]" />
+ //
+ // Styleguide atoms.cta
+
+/// CTA Arrow
+ //
+ // .mg-cta--lightBlue - reverse and light blue
+ // .mg-cta--lightGreen - reverse and light green
+ //
+ // markup:
+ // <button class="mg-cta mg-cta--arrow {{modifier_class}}">Button</button>
+ // <a href="#" class="mg-cta mg-cta--arrow {{modifier_class}}">Link</a>
+ // <input type="submit" class="mg-cta mg-cta--arrow {{modifier_class}}" value="Input[type=submit]" />
+ //
+ // weight: -10
+ //
+ // Styleguide atoms.cta.arrow
+
+ /// CTA Anchor
+ //
+ // .mg-cta--anchorGreen - full width off the container
+ // .mg-cta--anchorBlue - reverse and light blue
+ //
+ // markup:
+ // <button class="mg-cta mg-cta--arrow mg-cta--anchor {{modifier_class}}">Button</button>
+ // <a href="#" class="mg-cta mg-cta--arrow mg-cta--anchor {{modifier_class}}">Link</a>
+ //
+ // Styleguide atoms.cta.anchor
+
+&-cta {
+  @include deco-roll;
+  border: 0 none;
+  margin: 0;
+  padding: 8px 20px;
+  background: color(codgray);
+  font-family: "opensans_semibold";
+  font-size: rem(16px);
+  line-height: 1.2;
+  color: color(fuego);
+  display: inline-block;
+  transition: background .25s ease-in-out;
+  cursor: pointer;
+  text-align: left;
+
+  &:hover {
+    background: lighten(color(codgray), 12%);
+  }
+
+  &--arrow {
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      transform: rotate(45deg);
+      border: 2px solid color(fuego);
+      border-bottom: 0 none;
+      border-left: 0 none;
+      margin: 0 3px 0 5px;
+      box-shadow: 3px -3px 0 0px color(codgray), 4px -4px 0 0px color(fuego);
+      transition: margin .1s ease-in;
+    }
+
+    &:hover {
+      &::after {
+        margin: 0 0 0 8px;
+      }
+    }
+
+    &.#{$prefix}-cta--lightBlue {
+      &::after {
+        border-color: color(codgray);
+        box-shadow: 3px -3px 0 0px color(lilywhite), 4px -4px 0 0px color(codgray);
+      }
+    }
+
+    &.#{$prefix}-cta--lightGreen {
+      &::after {
+        border-color: color(codgray);
+        box-shadow: 3px -3px 0 0px color(chiffon), 4px -4px 0 0px color(codgray);
+      }
+    }
+
+    &.#{$prefix}-cta--anchor {
+      &::after {
+        transform: rotate(135deg);
+        float: left;
+        margin: -3px 15px 0 -5px;
+        border-color: color(codgray);
+        box-shadow: 3px -3px 0 0px color(wildsand), 4px -4px 0 0px color(codgray);
+      }
+    }
+  }
+
+  &--lightBlue {
+    color: color(codgray);
+    background: color(lilywhite);
+
+    &:hover {
+      background: darken(color(lilywhite), 5%);
+    }
+  }
+
+  &--lightGreen {
+    color: color(codgray);
+    background: color(chiffon);
+
+    &:hover {
+      background: darken(color(chiffon), 10%);
+    }
+  }
+
+  &--anchor {
+    box-sizing: border-box;
+    width: 100%;
+    background: color(wildsand);
+    color: color(codgray);
+    transition: box-shadow .5s cubic-bezier(0.4, 0, 1, 1);
+
+    &:hover {
+      background: color(wildsand);
+    }
+
+    &Green {
+      box-shadow: inset 0px -4px 0 color(conifer);
+
+      &:hover {
+        box-shadow: inset 0px 100px 0 color(conifer);
+      }
+    }
+
+    &Blue {
+      box-shadow: inset 0px -4px 0 color(regent);
+
+      &:hover {
+        box-shadow: inset 0px 100px 0 color(regent);
+      }
+    }
+  }
+
+  &--green {
+    background: color(limeade);
+    color: color(wildsand);
+
+    &:hover {
+      background: darken(color(limeade), 10%);
+    }
+  }
+
+  &--darkGreen {
+    background: color(japlaurel);
+    color: color(wildsand);
+
+    &:hover {
+      background: darken(color(japlaurel), 10%);
+    }
+  }
+}
+

@@ -1,0 +1,57 @@
+/// Link
+ //
+ // External link
+ //
+ //
+ // markup:
+ // <button class="mg-link {{modifier_class}}"><span>Button </span>button</button>
+ // <a href="#" class="mg-link {{modifier_class}}"><span>Link </span>link</a>
+ //
+ // Styleguide atoms.link
+
+
+&-link {
+  border: 0 none;
+  margin: 0;
+  padding: 0;
+  padding-right: 15px;
+  background: color(calypso);
+  font-family: "opensans_semibold";
+  font-size: rem(16px);
+  line-height: 1.2;
+  color: color(wildsand);
+  display: inline-block;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: left;
+
+  &:hover {
+    span {
+      padding: 8px 15px 8px 35px;
+    }
+  }
+
+  span {
+    display: inline-block;
+    padding: 8px 15px;
+    margin-right: 15px;
+    background: color(chathams);
+    position: relative;
+    transition: padding .15s ease-in-out;
+
+    &::before {
+      content: "";
+      background: color(chathams);
+      display: block;
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      right: -4px;
+      top: 50%;
+      margin-top: -6px;
+      transform: rotate(45deg);
+    }
+  }
+}
+

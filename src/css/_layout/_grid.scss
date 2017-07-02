@@ -1,0 +1,332 @@
+/// Grid simple syntax
+ //
+ // markup:
+ // <div class="row">
+ //   <div class="col-xs-12">
+ //     <div class="box">12 cols for small screen</div>
+ //   </div>
+ // </div>
+ //
+ // Styleguide Layout.grid
+
+/// Grid with integrate breakpoint
+ //
+ // markup:
+ // <div class="row">
+ //   <div class="col-xs-12 col-sm-8 col-md-6 col-lg-4">
+ //     <div class="box">Responsive with integrate breakpoint</div>
+ //   </div>
+ // </div>
+ //
+ //
+ // Further infos here : [flexboxgrid](http://flexboxgrid.com/)
+ //
+ // Styleguide Layout.grid.breakpoint
+
+ $g-all-span-selector: ();
+
+.container-fluid,
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-fluid {
+  padding-left: $outer-margin;
+  padding-right: $outer-margin;
+}
+
+.row {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: $gutter-compensation;
+  margin-right: $gutter-compensation;
+
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.col {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  padding-left: $half-gutter-width;
+  padding-right: $half-gutter-width;
+
+  &.reverse {
+    flex-direction: column-reverse;
+  }
+}
+
+@for $i from 1 through $grid-cols {
+  .col-xs-#{$i} {
+    flex-basis: calc(100% / #{$i});
+    max-width: calc(100% / #{$i});
+  }
+
+  // add each span in "all span selector"
+  $g-all-span-selector: append($g-all-span-selector, '&_#{$i}', 'comma');
+}
+
+@for $i from 0 through $grid-cols {
+  .col-xs-offset-#{$i} {
+    margin-left: calc(100% / #{$i});
+  }
+
+  // add each span in "all span selector"
+  $g-all-span-selector: append($g-all-span-selector, '&_#{$i}', 'comma');
+}
+
+.start-xs {
+  justify-content: flex-start;
+  text-align: start;
+}
+
+.center-xs {
+  justify-content: center;
+  text-align: center;
+}
+
+.end-xs {
+  justify-content: flex-end;
+  text-align: end;
+}
+
+.top-xs {
+  align-items: flex-start;
+}
+
+.middle-xs {
+  align-items: center;
+}
+
+.bottom-xs {
+  align-items: flex-end;
+}
+
+.around-xs {
+  justify-content: space-around;
+}
+
+.between-xs {
+  justify-content: space-between;
+}
+
+.first-xs {
+  order: -1;
+}
+
+.last-xs {
+  order: 1;
+}
+
+@include mq($from: S) {
+  .container {
+    width: $container-s;
+  }
+
+  @for $i from 1 through $grid-cols {
+    .col-s-#{$i} {
+      flex-basis: calc(100% / #{$i});
+      max-width: calc(100% / #{$i});
+    }
+
+    // add each span in "all span selector"
+    $g-all-span-selector: append($g-all-span-selector, '&_#{$i}', 'comma');
+  }
+
+  @for $i from 0 through $grid-cols {
+    .col-s-offset-#{$i} {
+      margin-left: calc(100% / #{$i});
+    }
+
+    // add each span in "all span selector"
+    $g-all-span-selector: append($g-all-span-selector, '&_#{$i}', 'comma');
+  }
+
+  .start-s {
+    justify-content: flex-start;
+    text-align: start;
+  }
+
+  .center-s {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .end-s {
+    justify-content: flex-end;
+    text-align: end;
+  }
+
+  .top-s {
+    align-items: flex-start;
+  }
+
+  .middle-s {
+    align-items: center;
+  }
+
+  .bottom-s {
+    align-items: flex-end;
+  }
+
+  .around-s {
+    justify-content: space-around;
+  }
+
+  .between-s {
+    justify-content: space-between;
+  }
+
+  .first-s {
+    order: -1;
+  }
+
+  .last-s {
+    order: 1;
+  }
+}
+
+@include mq($from: M) {
+  .container {
+    width: $container-m;
+  }
+
+  @for $i from 1 through $grid-cols {
+    .col-m-#{$i} {
+      flex-basis: calc(100% / #{$i});
+      max-width: calc(100% / #{$i});
+    }
+
+    // add each span in "all span selector"
+    $g-all-span-selector: append($g-all-span-selector, '&_#{$i}', 'comma');
+  }
+
+  @for $i from 0 through $grid-cols {
+    .col-m-offset-#{$i} {
+      margin-left: calc(100% / #{$i});
+    }
+
+    // add each span in "all span selector"
+    $g-all-span-selector: append($g-all-span-selector, '&_#{$i}', 'comma');
+  }
+
+  .start-m {
+    justify-content: flex-start;
+    text-align: start;
+  }
+
+  .center-m {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .end-m {
+    justify-content: flex-end;
+    text-align: end;
+  }
+
+  .top-m {
+    align-items: flex-start;
+  }
+
+  .middle-m {
+    align-items: center;
+  }
+
+  .bottom-m {
+    align-items: flex-end;
+  }
+
+  .around-m {
+    justify-content: space-around;
+  }
+
+  .between-m {
+    justify-content: space-between;
+  }
+
+  .first-m {
+    order: -1;
+  }
+
+  .last-m {
+    order: 1;
+  }
+}
+
+@include mq($from: L) {
+  .container {
+    width: $container-l;
+  }
+
+  @for $i from 1 through $grid-cols {
+    .col-l-#{$i} {
+      flex-basis: calc(100% / #{$i});
+      max-width: calc(100% / #{$i});
+    }
+
+    // add each span in "all span selector"
+    $g-all-span-selector: append($g-all-span-selector, '&_#{$i}', 'comma');
+  }
+
+  @for $i from 0 through $grid-cols {
+    .col-md-offset-#{$i} {
+      margin-left: calc(100% / #{$i});
+    }
+
+    // add each span in "all span selector"
+    $g-all-span-selector: append($g-all-span-selector, '&_#{$i}', 'comma');
+  }
+
+  .start-l {
+    justify-content: flex-start;
+    text-align: start;
+  }
+
+  .center-l {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .end-l {
+    justify-content: flex-end;
+    text-align: end;
+  }
+
+  .top-l {
+    align-items: flex-start;
+  }
+
+  .middle-l {
+    align-items: center;
+  }
+
+  .bottom-l {
+    align-items: flex-end;
+  }
+
+  .around-l {
+    justify-content: space-around;
+  }
+
+  .between-l {
+    justify-content: space-between;
+  }
+
+  .first-l {
+    order: -1;
+  }
+
+  .last-l {
+    order: 1;
+  }
+}
+

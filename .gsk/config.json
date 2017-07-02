@@ -6,7 +6,7 @@
   },
   "css" : {
     "src-dir"     : "./src/css",
-    "dest-dir"    : "./",
+    "dest-dir"    : "./build/css",
     "engine"      : "sass",
     "postcss"     : {
       "autoprefixer": {
@@ -47,7 +47,7 @@
     "port"     : 8000,
     "open"     : false,
     "directory": false,
-    "baseDir"  : "./build"
+    "baseDir"  : "./"
   },
   "sftp-deploy": {
     "host"     : "host",

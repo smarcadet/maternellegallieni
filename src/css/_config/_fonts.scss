@@ -1,0 +1,29 @@
+/// Fonts
+ //
+ // * `$font-roboto-bold: 'robotobold', sans-serif;`
+ // * `$font-roboto-regular: 'robotoregular', sans-serif;`
+ // * `$font-default: Verdana, Geneva, sans-serif;`
+ //
+ // Styleguide Config.fonts
+
+// roboto regular
+@font-face {
+  font-family: 'opensans_semibold';
+  src: url('../fonts/opensans-semibolditalic.woff') format('woff'),
+       url('../fonts/opensans-semibolditalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// roboto bold
+@font-face {
+  font-family: 'robotobold';
+  src: url('../fonts/roboto-bold.woff') format('woff'),
+       url('../fonts/roboto-bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font-roboto-bold: 'robotobold', sans-serif;
+$opensans_semiblod: 'opensans_semibold', sans-serif;
+$font-default: Verdana, Geneva, sans-serif;
