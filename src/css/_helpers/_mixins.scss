@@ -145,7 +145,7 @@
   @if $i > 1
   {
     @include repeat($select, $i - 1) {
-      &.#{$prefix-project}#{$select} {
+      &.#{$prefix}#{$select} {
         @content;
       }
     }

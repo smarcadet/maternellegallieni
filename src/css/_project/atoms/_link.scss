@@ -14,7 +14,7 @@
   border: 0 none;
   margin: 0;
   padding: 0;
-  padding-right: 15px;
+  padding-right: 25px;
   background: color(calypso);
   font-family: "opensans_semibold";
   font-size: rem(16px);
@@ -25,10 +25,13 @@
   text-transform: uppercase;
   text-decoration: none;
   text-align: left;
+  transition: padding .15s ease-in-out;
 
   &:hover {
+    padding-right: 15px;
+
     span {
-      padding: 8px 15px 8px 35px;
+      padding: 8px 15px 8px 25px;
     }
   }
 

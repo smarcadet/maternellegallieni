@@ -15,7 +15,9 @@
 		<div class="max-width">
 			<div id="title-container" class="title-container">
 				<h1 class="mg-header-logo">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/src/assets/img/logo.png" alt="Maternelle Gallieni - Nogent sur Marne" class="mg-header-logo-img">
+					<a href="\">
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/src/assets/img/logo.png" alt="Maternelle Gallieni - Nogent sur Marne" class="mg-header-logo-img">
+					</a>
 				</h1>
 				<div class="mg-header-infos">
 					<p class="mg-header-infos-address">

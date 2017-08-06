@@ -8,7 +8,7 @@
 
 // roboto regular
 @font-face {
-  font-family: 'opensans_semibold';
+  font-family: 'opensans-semibold';
   src: url('../fonts/opensans-semibolditalic.woff') format('woff'),
        url('../fonts/opensans-semibolditalic.woff2') format('woff2');
   font-weight: normal;
@@ -17,13 +17,14 @@
 
 // roboto bold
 @font-face {
-  font-family: 'robotobold';
+  font-family: 'walterturncoat';
   src: url('../fonts/roboto-bold.woff') format('woff'),
        url('../fonts/roboto-bold.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
-$font-roboto-bold: 'robotobold', sans-serif;
-$opensans_semiblod: 'opensans_semibold', sans-serif;
-$font-default: Verdana, Geneva, sans-serif;
+$font-default: Arial, sans-serif;
+
+$font-walterturncoat: 'walterturncoat', $font-default;
+$font-opensans-semiblod: 'opensans-semibold', $font-default;

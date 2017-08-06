@@ -157,7 +157,7 @@ $font-icon: 'fontello';
     left: 0;
     right: 0;
     top: 0;
-    box-shadow: 0 5px 8px transparentize(black, .8);
+    box-shadow: 0 5px 8px transparentize($black, .8);
     z-index: 50;
 
     &Logo {
@@ -305,7 +305,7 @@ $font-icon: 'fontello';
     }
   }
 
-  & table {
+  table {
     font: 1rem Georgia, serif;
     border-spacing: 0;
     border-collapse: collapse;
