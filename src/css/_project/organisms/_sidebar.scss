@@ -1,0 +1,19 @@
+/// Sidebar
+ //
+ //
+ // Styleguide organisms.sidebar
+
+@at-root {
+  .sidebar-primary {
+    .widget {
+      background-color: color(wildsand);
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+    }
+  }
+}
+

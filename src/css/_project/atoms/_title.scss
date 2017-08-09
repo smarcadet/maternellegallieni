@@ -1,0 +1,25 @@
+/// Title
+ //
+ //
+ // Styleguide atoms.title
+
+
+&-title {
+  font-family: $font-walterturncoat;
+
+  &--alpha {
+    font-size: rem(40px) !important;
+    text-transform: uppercase;
+  }
+
+  &--beta {
+    font-size: rem(20px) !important;
+    text-transform: uppercase;
+    margin-bottom: rem(10px);
+  }
+
+  &--gamma {
+    font-size: rem(20px) !important;
+  }
+}
+

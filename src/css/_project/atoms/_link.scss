@@ -14,32 +14,34 @@
   border: 0 none;
   margin: 0;
   padding: 0;
-  padding-right: 25px;
-  background: color(calypso);
-  font-family: "opensans_semibold";
+  padding-right: 20px;
+  background: color(picton);
+  font-family: "opensans-semibold";
   font-size: rem(16px);
   line-height: 1.2;
-  color: color(wildsand);
   display: inline-block;
+  color: color(codgray) !important;
   cursor: pointer;
   text-transform: uppercase;
-  text-decoration: none;
+  text-decoration: none !important;
   text-align: left;
-  transition: padding .15s ease-in-out;
+  transition: padding .15s ease-in-out, background-color .15s ease-in-out;
 
   &:hover {
-    padding-right: 15px;
+    padding-right: 10px;
+    background-color: color(fuego);
 
     span {
-      padding: 8px 15px 8px 25px;
+      padding: 8px 10px 8px 20px;
     }
   }
 
   span {
     display: inline-block;
-    padding: 8px 15px;
-    margin-right: 15px;
+    padding: 8px 10px;
+    margin-right: 10px;
     background: color(chathams);
+    color: color(wildsand);
     position: relative;
     transition: padding .15s ease-in-out;
 

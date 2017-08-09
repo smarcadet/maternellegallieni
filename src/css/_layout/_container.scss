@@ -1,22 +1,59 @@
-.primary-container {
-  padding: 0 rem(40px);
-  margin: 0 auto;
-  min-height: 0;
-  max-width: 1280px;
+@at-root {
+  .primary-container {
+    padding: 0 rem(40px);
+    margin: 0 auto;
+    min-height: 0;
+    max-width: 1280px;
 
-  .main {
-    width: rem(780px);
+    .main {
+      width: rem(780px);
+    }
+
+    .sidebar-primary {
+      width: rem(382px);
+    }
+  }
+
+  .menu-container {
+    padding: 0 rem(40px);
   }
 
   .sidebar-primary {
-    width: rem(382px);
+    margin-top: 0;
   }
 }
 
-.menu-container {
-  padding: 0 rem(40px);
+&-container {
+  &-school {
+    position: relative;
+
+    &::before {
+      content: "";
+      background: url(../img/school-pattern.jpg) repeat left top;
+      position: absolute;
+      top: 0;
+      left: -1000%;
+      right: -1000%;
+      bottom: 0;
+      display: block;
+      z-index: -1;
+    }
+  }
+
+  &-center {
+    position: relative;
+
+    &::before {
+      content: "";
+      background: url(../img/center-pattern.jpg) repeat left top;
+      position: absolute;
+      top: 0;
+      left: -1000%;
+      right: -1000%;
+      bottom: 0;
+      display: block;
+      z-index: -1;
+    }
+  }
 }
 
-.sidebar-primary {
-  margin-top: 0;
-}

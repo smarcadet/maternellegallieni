@@ -1,0 +1,21 @@
+/// blogList
+ //
+ //
+ // Styleguide molecules.blogList
+
+&-blogList {
+  font-size: 0; // to avoid the node-text gap of inline-block display between <li>.
+  margin-bottom: rem(30px) !important;
+
+  > li {
+    display: inline-block;
+    width: calc(100% / 3.1);
+    margin-bottom: rem(15px);
+
+    .#{$prefix}-link {
+      font-size: rem(16px);
+      display: block;
+      max-width: 90%;
+    }
+  }
+}

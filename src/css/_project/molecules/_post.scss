@@ -1,0 +1,38 @@
+/// Post
+ //
+ //
+ // Styleguide molecules.post
+
+@at-root {
+  .post {
+    z-index: -1;
+  }
+  
+  .home .post {
+		width: 48%;
+		float: left;
+	}
+
+	.category .post {
+		width: 100%;
+	}
+
+	.post:first-child {
+		width: 100%;
+	}
+
+	.post:last-child {
+		float: right;
+	}
+
+	// to ensure that is only one post author and original one, not the modifier.
+	.post-byline > * {
+		display: none;
+	}
+
+	.post-byline > span:last-of-type,
+	.post-byline > a:last-of-type {
+		display: inline;
+	}
+}
+

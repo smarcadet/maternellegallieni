@@ -17,21 +17,26 @@ Template: period
 // @import '_config/grid-settings';
 @import '_config/fonts';
 
-// Layout
-// @import '_layout/grid';
-@import '_layout/container';
-
 // Partials wrap with project prefix
 .#{$prefix} {
   // Layout
   @import '_layout/zindex';
+  @import '_layout/container';
 
   // Project
   // Atoms
   @import '_project/atoms/cta';
   @import '_project/atoms/link';
+  @import '_project/atoms/handmade';
+  @import '_project/atoms/title';
+
+  // Molecules
+  @import '_project/molecules/post';
+  @import '_project/molecules/bloc';
+  @import '_project/molecules/blogList';
 
   // Organims
   @import '_project/organisms/header';
   @import '_project/organisms/nav';
+  @import '_project/organisms/sidebar';
 }

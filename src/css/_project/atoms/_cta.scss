@@ -43,7 +43,7 @@
   margin: 0;
   padding: 8px 20px;
   background: color(codgray);
-  font-family: "opensans_semibold";
+  font-family: "opensans-semibold";
   font-size: rem(16px);
   line-height: 1.2;
   color: color(fuego);
@@ -126,6 +126,7 @@
     background: color(wildsand);
     color: color(codgray);
     transition: box-shadow .5s cubic-bezier(0.4, 0, 1, 1);
+    font-size: rem(18px);
 
     &:hover {
       background: color(wildsand);
