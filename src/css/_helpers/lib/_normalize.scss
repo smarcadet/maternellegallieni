@@ -96,6 +96,10 @@ a {
   -webkit-text-decoration-skip: objects; // 2
 }
 
+a:hover, a:active, a:focus {
+  color: #333333;
+}
+
 // * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
 // * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
 

@@ -8,6 +8,22 @@
     .widget {
       background-color: color(wildsand);
 
+      &:first-of-type {
+        overflow: hidden;
+        position: relative;
+        z-index: -1;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          box-shadow: 0 0 40px 15px transparentize(black, .6);
+          display: block;
+        }
+      }
+
       ul {
         margin: 0;
         padding: 0;

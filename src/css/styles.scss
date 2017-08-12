@@ -20,6 +20,7 @@ Template: period
 // Partials wrap with project prefix
 .#{$prefix} {
   // Layout
+  @import '_layout/main-structure';
   @import '_layout/zindex';
   @import '_layout/container';
 

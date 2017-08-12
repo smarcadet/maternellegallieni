@@ -5,11 +5,29 @@
 
 @at-root {
   .post {
-    z-index: -1;
-  }
+		z-index: -1;
+		position: static;
+		
+		> article {
+			background: transparent;
+			box-shadow: none;
+		}
+
+		h2 {
+			margin-bottom: rem(10px);
+		}
+	}
+	
+	.post-container {
+		padding: 0;
+
+		img {
+			border: 8px solid color(picton);
+		}
+	}
   
   .home .post {
-		width: 48%;
+		width: 50%;
 		float: left;
 	}
 
@@ -19,10 +37,36 @@
 
 	.post:first-child {
 		width: 100%;
+		border-bottom: 1px dashed white;
 	}
 
 	.post:last-child {
 		float: right;
+		position: relative;
+		padding-left: 2%;
+		z-index: 1;
+
+		&::before {
+			content: "";
+			border-left: 1px dashed white;
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: -1000%;
+			display: block;
+		}
+
+		h2 {
+			font-size: rem(24px) !important;
+		}
+	}
+
+	.post:nth-of-type(2) {
+		padding-right: 2%;
+
+		h2 {
+			font-size: rem(24px) !important;
+		}
 	}
 
 	// to ensure that is only one post author and original one, not the modifier.
@@ -32,7 +76,20 @@
 
 	.post-byline > span:last-of-type,
 	.post-byline > a:last-of-type {
-		display: inline;
+		display: inline-block;
+	}
+
+	.post-byline a.category {
+		background-color: color(fuego);
+		font-family: $font-opensans-semiblod;
+		padding: rem(3px) rem(6px);
+		margin-left: rem(5px);
+		text-transform: uppercase;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
 	}
 }
 

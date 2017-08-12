@@ -6,10 +6,11 @@
 
 &-title {
   font-family: $font-walterturncoat;
+  font-weight: 400;
+  line-height: 1;
 
   &--alpha {
-    font-size: rem(40px) !important;
-    text-transform: uppercase;
+    font-size: rem(36px) !important;
   }
 
   &--beta {
