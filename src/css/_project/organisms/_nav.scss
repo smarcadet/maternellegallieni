@@ -51,5 +51,14 @@
         }
       }
     }
+
+    .sub-menu {
+      padding: 0 rem(10px);
+      
+      > .menu-item a {
+        text-transform: none;
+        text-align: left;
+      }
+    }
   }
 }

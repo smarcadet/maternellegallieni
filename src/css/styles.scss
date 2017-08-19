@@ -19,6 +19,10 @@ Template: period
 
 // Partials wrap with project prefix
 .#{$prefix} {
+  // Utilities
+  @import '_utilities/align';
+  @import '_utilities/colors';
+
   // Layout
   @import '_layout/main-structure';
   @import '_layout/zindex';
@@ -35,6 +39,7 @@ Template: period
   @import '_project/molecules/post';
   @import '_project/molecules/bloc';
   @import '_project/molecules/blogList';
+  @import '_project/molecules/visitCard';
 
   // Organims
   @import '_project/organisms/header';

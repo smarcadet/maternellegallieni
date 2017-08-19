@@ -44,7 +44,7 @@
     color: color(wildsand);
     position: relative;
     transition: padding .15s ease-in-out;
-    text-decoration: none;
+    cursor: pointer;
 
     &::before {
       content: "";

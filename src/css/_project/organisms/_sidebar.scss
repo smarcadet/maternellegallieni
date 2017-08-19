@@ -11,7 +11,7 @@
       &:first-of-type {
         overflow: hidden;
         position: relative;
-        z-index: -1;
+        z-index: 0;
 
         &::before {
           content: "";
@@ -19,7 +19,7 @@
           left: 0;
           right: 0;
           top: 0;
-          box-shadow: 0 0 40px 15px transparentize(black, .6);
+          box-shadow: 0 0 40px 15px transparentize(black, .5);
           display: block;
         }
       }

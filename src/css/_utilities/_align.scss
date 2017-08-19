@@ -1,0 +1,19 @@
+/// Align
+ //
+ //
+ // Styleguide utilities.align
+
+&-align {
+  &--left {
+    text-align: left;
+  }
+
+  &--center {
+    text-align: right;
+  }
+
+  &--right {
+    text-align: right;
+  }
+}
+

@@ -106,8 +106,8 @@ a:hover, a:active, a:focus {
 
 abbr[title] {
   border-bottom: none; // 1
-  text-decoration: underline; // 2
-  text-decoration: underline dotted; // 2
+  text-decoration: none; // 2
+  cursor: help;
 }
 
 // * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
@@ -135,6 +135,10 @@ kbd,
 samp {
   font-family: monospace, monospace; // 1
   font-size: 1em; // 2
+}
+
+p {
+  margin: .5em 0;
 }
 
 // * Add the correct font style in Android 4.3-.

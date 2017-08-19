@@ -2,6 +2,7 @@
   .loop-container {
     overflow: hidden;
     @include clearfix;
+    margin-bottom: rem(30px);
     
     &::after {
       display: none;

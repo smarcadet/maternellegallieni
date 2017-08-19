@@ -37,20 +37,20 @@
  //
  // Styleguide atoms.cta.anchor
 
-&-cta {
-  @include deco-roll;
+&-cta.#{$prefix}-cta {
   border: 0 none;
   margin: 0;
-  padding: 8px 20px;
+  padding: 8px 16px;
   background: color(codgray);
-  font-family: "opensans-semibold";
-  font-size: rem(16px);
+  font-family: $font-opensans-semibloditalic;
+  font-size: rem(15px);
   line-height: 1.2;
   color: color(fuego);
   display: inline-block;
   transition: background .25s ease-in-out;
   cursor: pointer;
   text-align: left;
+  text-decoration: none;
 
   &:hover {
     background: lighten(color(codgray), 12%);
