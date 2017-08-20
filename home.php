@@ -22,8 +22,12 @@
 		<?php dynamic_sidebar('static_school'); ?>
 	</div>
 
-	<div class="mg-container-center">
-		<?php dynamic_sidebar('static_center'); ?>
+	<div class="mg-container-asso">
+		<?php dynamic_sidebar('static_asso'); ?>
+	</div>
+
+	<div class="mg-container-hobbies">
+		<?php dynamic_sidebar('static_hobbies'); ?>
 	</div>
 
 <?php get_footer(); ?>

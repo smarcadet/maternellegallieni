@@ -4,9 +4,9 @@
  // Styleguide molecules.visitCard
 
 &-visitCard {
-  background-color: white;
+  background-color: color(linkwater);
   border: 8px solid color(wildsand);
-  box-shadow: inset 0 0 0 1px color(picton);
+  box-shadow: inset 0 0 2px 1px color(picton);
   position: relative;
   z-index: 1;
   padding: rem(10px) rem(15px);
@@ -19,7 +19,7 @@
     top: 0;
     bottom: 0;
     z-index: -1;
-    opacity: .4;
+    opacity: .3;
     margin: rem(-6px);
     padding: rem(15px) rem(10px);
     background: color(picton); /* fallback */
@@ -54,5 +54,15 @@
     font-family: $font-roboto-regular;
     font-size: rem(14px);
     line-height: 1.3;
+    margin-bottom: rem(10px);
+  }
+
+  &-tel {
+    background-color: color(wildsand);
+    border: 1px solid color(picton);
+    text-align: center;
+    padding: 3px;
+    margin-bottom: rem(5px);
+    font-size: rem(18px);
   }
 }

@@ -1,0 +1,20 @@
+&-footer {
+  color: white;
+  position: relative;
+  padding: rem(40px) 0;
+  margin: 0;
+  margin-top: rem(-10px); // to cancel inset box-shadow of before block
+
+  &::before {
+    content: "";
+    background: color(scorpion);
+    position: absolute;
+    top: 0;
+    left: -1000%;
+    right: -1000%;
+    bottom: 0;
+    display: block;
+    z-index: -1;
+    box-shadow: inset 0 1px 20px 0 transparentize(black, .5);
+  }
+}
