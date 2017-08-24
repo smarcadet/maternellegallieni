@@ -53,6 +53,7 @@
   }
 
   &-asso {
+    @include clearfix;
     position: relative;
     padding: rem(40px) 0;
 
@@ -67,6 +68,10 @@
       display: block;
       z-index: -1;
       box-shadow: inset 0 1px 20px 0 transparentize(black, .5);
+    }
+
+    ul, ol {
+      margin-top: 5px;
     }
   }
 
@@ -87,6 +92,15 @@
       z-index: -1;
       box-shadow: inset 0 1px 20px 0 transparentize(black, .5);
     }
+
+    .#{$prefix}-sep--bottom {
+      border-bottom-color: color(chathams);
+    }
+
+    .#{$prefix}-col {
+      &:first-of-type {
+        border-right-color: color(chathams);
+      }
+    }
   }
 }
-

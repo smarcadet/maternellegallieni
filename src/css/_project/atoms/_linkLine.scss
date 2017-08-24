@@ -1,0 +1,47 @@
+/// LinkLine
+ //
+ // External link
+ //
+ //
+ // markup:
+ // <button class="mg-linkLine {{modifier_class}}"><span>Button </span>button</button>
+ // <a href="#" class="mg-linkLine {{modifier_class}}"><span>LinkLine </span>linkLine</a>
+ //
+ // Styleguide atoms.linkLine
+
+
+&-linkLine {
+  border: 1px solid color(chathams);
+  color: color(chathams) !important;
+  padding: rem(3px) rem(10px);
+  font-size: rem(18px);
+  background: transparent;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &--lineThrough {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 1000%;
+      transform: translateY(-50%);
+      border-bottom: 1px solid color(chathams);
+      display: block;
+    }
+
+    &::before {
+      left: 100%;
+    }
+
+    &::after {
+      right: 100%;
+    }
+  }
+}
+

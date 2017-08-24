@@ -22,5 +22,12 @@
   &--gamma {
     font-size: rem(20px) !important;
   }
+
+  &--eta {
+    font-size: rem(24px) !important;
+    text-transform: uppercase;
+    margin-bottom: rem(10px);
+    line-height: 1.3;
+  }
 }
 

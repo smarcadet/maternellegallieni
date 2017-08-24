@@ -125,7 +125,7 @@
     width: 100%;
     background: color(wildsand);
     color: color(codgray);
-    transition: box-shadow .5s cubic-bezier(0.4, 0, 1, 1);
+    transition: box-shadow .25s cubic-bezier(0.4, 0, 1, 1);
     font-size: rem(18px);
 
     &:hover {
@@ -136,7 +136,7 @@
       box-shadow: inset 0px -4px 0 color(conifer);
 
       &:hover {
-        box-shadow: inset 0px 100px 0 color(conifer);
+        box-shadow: inset 0px -100px 0 color(conifer);
       }
     }
 
@@ -144,7 +144,7 @@
       box-shadow: inset 0px -4px 0 color(regent);
 
       &:hover {
-        box-shadow: inset 0px 100px 0 color(regent);
+        box-shadow: inset 0px -100px 0 color(regent);
       }
     }
   }

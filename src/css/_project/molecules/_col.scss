@@ -1,0 +1,20 @@
+/// Column
+ //
+ //
+ // Styleguide molecules.col
+
+&-col {
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  padding-right: rem(20px);
+
+  &:first-of-type {
+    border-right: 1px dashed color(japlaurel);
+  }
+
+  &:last-of-type {
+    padding-left: rem(20px);
+  }
+}
+

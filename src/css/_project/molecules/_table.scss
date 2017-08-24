@@ -1,0 +1,49 @@
+/// Table
+ //
+ //
+ // Styleguide molecules.table
+
+&-table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  position: relative;
+  margin-bottom: 0;
+
+  &::after {
+    content: "";
+    background: url("../img/clock.png") no-repeat right top;
+    display: block;
+    width: 93px;
+    height: 93px;
+    position: absolute;
+    top: -30px;
+    right: 10px;
+  }
+
+  thead {
+    th {
+      background-color: color(calypso);
+      border: 1px solid color(calypso);
+      text-align: left;
+      text-transform: uppercase;
+      font-family: $font-opensans-semiblod;
+      color: white;
+      font-size: rem(20px);
+      padding-top: rem(10px);
+      padding-bottom: rem(10px);
+    }
+  }
+
+  tbody {
+    td {
+      border: 1px solid color(calypso);
+      background-color: color(wildsand);
+
+      strong {
+        font-family: $font-opensans-semiblod;
+      }
+    }
+  }
+}
+

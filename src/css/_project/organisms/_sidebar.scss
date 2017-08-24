@@ -7,6 +7,7 @@
   .sidebar-primary {
     .widget {
       background-color: color(wildsand);
+      overflow: hidden;
 
       &:first-of-type {
         overflow: hidden;

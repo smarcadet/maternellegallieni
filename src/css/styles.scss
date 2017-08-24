@@ -22,6 +22,8 @@ Template: period
   // Utilities
   @import '_utilities/align';
   @import '_utilities/colors';
+  @import '_utilities/mg';
+  @import '_utilities/clearfix';
 
   // Layout
   @import '_layout/main-structure';
@@ -32,14 +34,19 @@ Template: period
   // Atoms
   @import '_project/atoms/cta';
   @import '_project/atoms/link';
+  @import '_project/atoms/linkLine';
   @import '_project/atoms/handmade';
   @import '_project/atoms/title';
+  @import '_project/atoms/sep';
+  @import '_project/atoms/list';
 
   // Molecules
   @import '_project/molecules/post';
   @import '_project/molecules/bloc';
+  @import '_project/molecules/col';
   @import '_project/molecules/blogList';
   @import '_project/molecules/visitCard';
+  @import '_project/molecules/table';
 
   // Organims
   @import '_project/organisms/header';

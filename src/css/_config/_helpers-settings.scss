@@ -27,6 +27,6 @@ $fs0: $bfs !default;
  //
  // - `$lh`: line height.
  //
-$lh: round($fs0 / 2/3) !default;
+$lh: round($fs0 / (2/3)) !default;
 
 
