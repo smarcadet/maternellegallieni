@@ -49,6 +49,7 @@
       bottom: 0;
       display: block;
       z-index: -1;
+      opacity: .9;
     }
   }
 
@@ -68,6 +69,7 @@
       display: block;
       z-index: -1;
       box-shadow: inset 0 1px 20px 0 transparentize(black, .5);
+      opacity: .9;
     }
 
     ul, ol {

@@ -11,6 +11,12 @@
 
 
 &-linkLine {
+  &-wrapper {
+    margin: 0 rem(-29px);
+    text-align: center;
+    overflow: hidden;
+  }
+
   border: 1px solid color(chathams);
   color: color(chathams) !important;
   padding: rem(3px) rem(10px);

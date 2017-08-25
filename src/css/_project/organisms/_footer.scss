@@ -1,7 +1,7 @@
 &-footer {
   color: white;
   position: relative;
-  padding: rem(40px) 0;
+  padding: rem(80px) 0 0;
   margin: 0;
   margin-top: rem(-10px); // to cancel inset box-shadow of before block
 
@@ -16,5 +16,36 @@
     display: block;
     z-index: -1;
     box-shadow: inset 0 1px 20px 0 transparentize(black, .5);
+  }
+
+  &-bottom {
+    @include clearfix;
+    background-color: color(tundora);
+  }
+
+  &-col {
+    box-sizing: border-box;
+    float: left;
+    width: 60%;
+    text-align: right;
+    padding-top: rem(50px);
+
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+
+    &.drawing {
+      float: right;
+      width: 40%;
+      margin: 0;
+      text-align: left;
+      padding-left: rem(20px);
+      padding-top: 0;
+
+      img {
+        margin-top: -69px;
+      }
+    }
   }
 }

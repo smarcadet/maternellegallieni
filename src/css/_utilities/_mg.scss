@@ -18,28 +18,28 @@ $margin: (
 &-mg {
 
   &--0 {
-    margin: 0;
+    margin: 0 !important;
   }
 
   &-t--0 {
-    margin-top: 0;
+    margin-top: 0 !important;
   }
 
   &-b--0 {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
   }
 
   // mg-mg-t--{x}
   @each $i in $margin {
     &-t--#{nth($i, 1)} {
-      margin-top: nth($i, 2);
+      margin-top: nth($i, 2) !important;
     }
   }
 
   // mg-mg-b--{x}
   @each $i in $margin {
     &-b--#{nth($i, 1)} {
-      margin-bottom: nth($i, 2);
+      margin-bottom: nth($i, 2) !important;
     }
   }
 }

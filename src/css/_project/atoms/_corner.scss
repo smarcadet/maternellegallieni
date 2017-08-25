@@ -1,0 +1,15 @@
+/// Corner
+ //
+ //
+ // Styleguide atoms.corner
+
+
+&-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("../img/corner.png") no-repeat left top;
+  width: 67px;
+  height: 68px;
+}
+
