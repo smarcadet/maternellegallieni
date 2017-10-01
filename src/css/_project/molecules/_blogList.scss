@@ -16,6 +16,10 @@
       font-size: rem(16px);
       display: block;
       max-width: 90%;
+
+      @include mq($until: L) {
+        font-size: rem(14px);
+      }
     }
   }
 }

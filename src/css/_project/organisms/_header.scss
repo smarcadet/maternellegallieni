@@ -23,6 +23,11 @@
 		&:before {
 			background: url('../img/header_left.jpg') repeat-x left top;
 			right: 50%;
+
+			@include mq($until: L) {
+				background-size: contain;
+				background-position: left -25px;
+			}
 		}
 
 		&:after {
@@ -33,6 +38,11 @@
 			visibility: visible;
 			line-height: auto;
 			height: auto;
+
+			@include mq($until: L) {
+				background-size: contain;
+				background-position: left -25px;
+			}
 		}
 	}
 
@@ -51,8 +61,10 @@
 
 		@include mq($until: L) {
 			max-width: rem(1024px);
-			min-height: 0;
+			min-height: rem(328px);;
 			background-size: contain;
+			background-position: center center;
+			margin: 0 auto;
 		}
 
 		&-img {
@@ -60,8 +72,11 @@
 			margin-top: rem(10px);
 
 			@include mq($until: L) {
-				margin-left: rem(32px);
+				position: relative;
+				left: 50%;
+				margin-left: -440px;
 				max-width: 46%;
+				max-height: rem(275px);
 			}
 		}
 	}
@@ -73,6 +88,14 @@
 		font-size: rem(19px);
 		line-height: 1.3;
 		max-width: rem(450px);
+
+		@include mq($until: L) {
+			bottom: 22px;
+			left: 50%;
+			margin-left: -395px;
+			font-size: rem(14px);
+			max-width: rem(338px);
+		}
 
 		a {
 			color: color(wildsand);

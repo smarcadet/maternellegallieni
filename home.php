@@ -22,11 +22,11 @@
 		<?php dynamic_sidebar('static_school'); ?>
 	</div>
 
-	<div class="mg-container-asso">
+	<div id="asso" class="mg-container-asso">
 		<?php dynamic_sidebar('static_asso'); ?>
 	</div>
 
-	<div class="mg-container-hobbies">
+	<div id="hobbies" class="mg-container-hobbies">
 		<?php dynamic_sidebar('static_hobbies'); ?>
 	</div>
 

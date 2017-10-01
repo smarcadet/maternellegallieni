@@ -29,6 +29,7 @@
     width: 60%;
     text-align: right;
     padding-top: rem(50px);
+    font-size: rem(14px);
 
     a {
       color: white;
@@ -45,6 +46,10 @@
 
       img {
         margin-top: -69px;
+
+        @include mq($until: L) {
+          margin-top: -15%;
+        }
       }
     }
   }

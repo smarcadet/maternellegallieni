@@ -128,6 +128,10 @@
     transition: box-shadow .25s cubic-bezier(0.4, 0, 1, 1);
     font-size: rem(18px);
 
+    @include mq($until: L) {
+      font-size: rem(15px);
+    }
+
     &:hover {
       background: color(wildsand);
     }
