@@ -151,6 +151,14 @@
         box-shadow: inset 0px -100px 0 color(regent);
       }
     }
+
+    &Grey {
+      box-shadow: inset 0px -4px 0 silver;
+      
+      &:hover {
+        box-shadow: inset 0px -100px 0 silver;
+      }
+    }
   }
 
   &--green {

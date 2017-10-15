@@ -5,6 +5,10 @@
   margin: 0;
   margin-top: rem(-10px); // to cancel inset box-shadow of before block
 
+  @include mq($until: S) {
+    padding: rem(10px) 0 0;
+  }
+
   &::before {
     content: "";
     background: color(scorpion);
@@ -21,6 +25,15 @@
   &-bottom {
     @include clearfix;
     background-color: color(tundora);
+
+    @include mq($until: S) {
+      background-color: color(codgray);
+
+      > div {
+        display: flex;
+        flex-direction: column;
+      }
+    }
   }
 
   &-col {
@@ -30,6 +43,15 @@
     text-align: right;
     padding-top: rem(50px);
     font-size: rem(14px);
+
+    @include mq($until: S) {
+      width: auto;
+      float: none;
+      padding-top: 0;
+      order: 1;
+      padding: rem(10px) rem(20px);
+      text-align: left;
+    }
 
     a {
       color: white;
@@ -44,11 +66,23 @@
       padding-left: rem(20px);
       padding-top: 0;
 
+      @include mq($until: S) {
+        width: auto;
+        float: none;
+        padding: 0;
+        order: 0;
+      }
+
       img {
         margin-top: -69px;
 
         @include mq($until: L) {
           margin-top: -15%;
+        }
+
+        @include mq($until: S) {
+          margin-top: 0;
+          width: 100%;
         }
       }
     }

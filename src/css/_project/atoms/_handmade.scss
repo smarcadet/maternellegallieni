@@ -6,5 +6,12 @@
 
 &-handmade {
   margin: rem(-30px) 0 0 0;
-}
 
+  @include mq($until: S) {
+    margin: rem(-10px) 0 0 0;
+
+    img {
+      display: none;
+    }
+  }
+}

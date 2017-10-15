@@ -1,0 +1,16 @@
+/// Display
+ //
+ //
+ // Styleguide atoms.display
+
+
+&-display {
+  &--s {
+    display: none !important;
+
+    @include mq($until: S) {
+      display: block !important;
+    }
+  }
+}
+

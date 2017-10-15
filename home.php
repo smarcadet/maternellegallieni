@@ -22,6 +22,11 @@
 		<?php dynamic_sidebar('static_school'); ?>
 	</div>
 
+	<aside class="sidebar sidebar-primary" id="sidebar-primary" role="complementary">
+			<h1 class="screen-reader-text"><?php esc_html_e('Sidebar', 'period'); ?></h1>
+			<?php dynamic_sidebar( 'primary' ); ?>
+	</aside>
+
 	<div id="asso" class="mg-container-asso">
 		<?php dynamic_sidebar('static_asso'); ?>
 	</div>

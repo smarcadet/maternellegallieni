@@ -47,6 +47,12 @@
         padding: 5px 8px 5px 12px;
       }
     }
+
+    @include mq($until: S) {
+      abbr {
+        padding: 10px 8px 10px 12px;
+      }
+    }
   }
 
   abbr {
@@ -85,6 +91,14 @@
 
       abbr {
         padding: 5px 8px;
+      }
+    }
+
+    @include mq($until: S) {
+      padding: 10px 8px;
+
+      abbr {
+        padding: 10px 8px;
       }
     }
   }

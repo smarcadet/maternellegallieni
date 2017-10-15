@@ -32,15 +32,30 @@
         right: 70px;
       }
 
+      @include mq($until: S) {
+        box-shadow: none;
+
+        &::after,
+        &::before {
+          display: none;
+        }
+      }
+
       &:first-of-type {
         overflow: hidden;
         position: relative;
         z-index: 0;
         border-top-right-radius: 0;
 
-        // @include mq($until: L) {
-        //   display: none;
-        // }
+        @include mq($until: S) {
+          max-height: 160px;
+          position: absolute;
+          top: -160px; // compensate the top:160px of the parent container.
+          right: 0;
+          left: 0;
+          padding-top: 1em;
+          padding-bottom: 1em;
+        }
 
         &::before {
           content: "";
@@ -53,6 +68,10 @@
           background: none;
           width: auto;
           height: auto;
+
+          @include mq($until: S) {
+            display: none;
+          }
         }
 
         &::after {
