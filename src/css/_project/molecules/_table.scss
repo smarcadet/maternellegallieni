@@ -19,6 +19,12 @@
     position: absolute;
     top: -30px;
     right: 10px;
+
+    @include mq($until: S) {
+      top: -50px;
+      right: -50px;
+      transform: scale(.8);
+    }
   }
 
   thead {
@@ -32,6 +38,10 @@
       font-size: rem(20px);
       padding-top: rem(10px);
       padding-bottom: rem(10px);
+
+      @include mq($until: S) {
+        font-size: rem(18px);
+      }
     }
   }
 
@@ -40,8 +50,16 @@
       border: 1px solid color(calypso);
       background-color: color(wildsand);
 
+      @include mq($until: S) {
+        font-size: rem(15px);
+      }
+
       strong {
         font-family: $font-opensans-semiblod;
+
+        @include mq($until: S) {
+          display: block;
+        }
       }
     }
   }

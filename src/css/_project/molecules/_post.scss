@@ -92,6 +92,14 @@
   .home .post {
 		width: 50%;
 		float: left;
+
+		@include mq($until: S) {
+			width: auto;
+			float: none;
+			border-bottom: 1px dashed white;
+			margin-bottom: rem(20px);
+			padding-bottom: rem(20px)
+		}
 	}
 
 	.category .post {
@@ -111,14 +119,27 @@
 		padding-left: 2%;
 		z-index: 1;
 
-		&::before {
-			content: "";
-			border-left: 1px dashed white;
-			position: absolute;
-			left: 0;
-			top: 0;
-			bottom: -1000%;
-			display: block;
+		@include mq($from: S) {
+			padding-bottom: 0;
+
+			&::before {
+				content: "";
+				border-left: 1px dashed white;
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: -1000%;
+				display: block;
+			}
+		}
+
+		@include mq($until: S) {
+			padding-left: 0;
+			float: none;
+
+			&::before {
+				display: none;
+			}
 		}
 
 		h2 {

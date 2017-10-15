@@ -9,6 +9,10 @@
 		background-color: transparent;
 		padding: 0;
 
+		@include mq($until: S) {
+			background: color(fuego);
+		}
+
 		&:before,
 		&:after {
 			content: '';
@@ -18,6 +22,10 @@
 			top: 0;
 			bottom: 0;
 			z-index: -1;
+
+			@include mq($until: S) {
+				display: none;
+			}
 		}
 
 		&:before {
@@ -50,6 +58,28 @@
 		width: 100%;
 		margin-bottom: 0;
 	}
+
+	.toggle-navigation {
+		width: 100%;
+    text-align: left;
+		padding: .75em 0 .5em rem(10px);
+		margin: 0;
+		vertical-align: middle;
+		background: color(chathams);
+		border: 0 none;
+
+		&::after {
+			content: "Menu";
+			display: inline-block;
+			text-transform: uppercase;
+			color: white;
+			font-family: $font-opensans-semiblod;
+			font-size: rem(20px);
+			position: relative;
+			top: -3px;
+			left: 10px;
+		}
+	}
 }
 
 &-header {
@@ -67,6 +97,15 @@
 			margin: 0 auto;
 		}
 
+		@include mq($until: S) {
+			background: none;
+			min-height: 0;
+		}
+
+		a {
+			display: block;
+		}
+
 		&-img {
 			margin-left: rem(52px);
 			margin-top: rem(10px);
@@ -77,6 +116,14 @@
 				margin-left: -440px;
 				max-width: 46%;
 				max-height: rem(275px);
+			}
+
+			@include mq($until: S) {
+				position: static;
+				margin: 0;
+				max-width: 100%;
+				max-height: none;
+				display: block;
 			}
 		}
 	}
@@ -97,8 +144,22 @@
 			max-width: rem(338px);
 		}
 
+		@include mq($until: S) {
+			position: static;
+			max-width: none;
+			color: color(codgray);
+			padding: rem(10px) 0;
+			margin: rem(-13px) rem(15px) rem(15px);
+			background: color(wildsand);
+			border: 1px dashed color(limeade);
+		}
+
 		a {
 			color: color(wildsand);
+
+			@include mq($until: S) {
+				color: color(codgray);
+			}
 		}
 
 		&-address {
@@ -106,25 +167,48 @@
 			width: 50%;
 			margin: 0;
 
+			@include mq($until: S) {
+				width: 100%;
+				float: none;
+			}
+
 			span {
 				display: block;
 				margin-bottom: rem(5px);
+
+				@include mq($until: S) {
+					display: inline-block;
+				}
 			}
 
 			strong {
 				font-style: italic;
+
+				@include mq($until: S) {
+					font-style: normal;
+				}
 			}
 		}
 
 		&-number {
 			font-weight: bold;
 			font-size: 1.2em;
+
+			@include mq($until: S) {
+				font-size: 1.4em;
+			}
 		}
 
 		&-mail {
 			font-size: .85em;
 			text-decoration: underline;
 			font-style: italic;
+
+			@include mq($until: S) {
+				font-size: 1em;
+				padding-top: rem(5px);
+				display: block;
+			}
 		}
 	}
 }

@@ -1,63 +1,139 @@
 @at-root {
-  .menu-primary-container {
-    margin-bottom: 0;
-  }
-
-	.menu-primary {
-    background-color: color(lilywhite);
-    // position: relative;
-    z-index: 10;
-    box-shadow: 0 5px 20px 0 transparentize(black , .75);
-
-    .max-width {
-      max-width: rem(1200px);
-    }
-  }
-
-  .menu-primary-items {
-    display: flex;;
-    min-height: rem(45px);
-
-    > .menu-item {
-      font-size: rem(20px);
-      flex: 1;
-      font-family: $font-walterturncoat;
-      text-transform: uppercase;
-      text-align: center;
+  @include mq($until: S) {
+    .menu-container {
+      padding: 0;
       margin: 0;
+    }
 
-      > a {
+    .menu-primary {
+      .toggle-dropdown {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        text-align: right;
+        max-height: rem(40px);
         color: color(codgray);
-        min-height: rem(45px);
-        display: block;
-        padding-top: 8px;
       }
+    }
 
-      &.current-menu-item, 
-      &.current_page_item, 
-      &.current-menu-ancestor,
-      &:hover,
-      &:focus, {
-        background-color: color(linkwater);
-        box-shadow: inset 0 -4px color(chathams);
+    .menu-primary-items {
+      background-color: color(linkwater);
+
+      .menu-item {
+        font-size: rem(20px);
+        font-family: $font-walterturncoat;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0;
+        position: relative;
+        border-top: 1px dotted color(calypso);
 
         a {
-          background: transparent;
+          color: color(codgray);
+          display: block;
+          padding-top: 8px;
+
+          &:hover,
+          &:focus {
+            background: transparent !important; // break too specify selector of parent theme
+          }
         }
 
-        > a:hover,
-        > a:focus {
-          background: transparent;
+        &.current-menu-item, 
+        &.current_page_item, 
+        &.current-menu-ancestor {
+          background-color: color(calypso);
+
+          a {
+            background: transparent;
+            color: color(wildsand);
+          }
+        }
+      }
+
+      .sub-menu {
+        > .menu-item {
+          background: color(wildsand);
+          padding-bottom: rem(6px);
+          margin: 0 !important; // break too specify selector of parent theme
         }
       }
     }
+  }
 
-    .sub-menu {
-      padding: 0 rem(10px);
-      
-      > .menu-item a {
-        text-transform: none;
-        text-align: left;
+  @include mq($from: S) {
+    .menu-primary-container {
+      margin-bottom: 0;
+    }
+  
+    .menu-primary {
+      background-color: color(lilywhite);
+      // position: relative;
+      z-index: 10;
+      box-shadow: 0 5px 20px 0 transparentize(black , .75);
+  
+      .max-width {
+        max-width: rem(1200px);
+      }
+    }
+  
+    .menu-primary-items {
+      display: flex;;
+      min-height: rem(45px);
+  
+      > .menu-item {
+        font-size: rem(20px);
+        flex: 1;
+        font-family: $font-walterturncoat;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0;
+  
+        > a {
+          color: color(codgray);
+          min-height: rem(45px);
+          display: block;
+          padding-top: 8px;
+        }
+  
+        &.current-menu-item, 
+        &.current_page_item, 
+        &.current-menu-ancestor,
+        &:hover,
+        &:focus, {
+          background-color: color(linkwater);
+          box-shadow: inset 0 -4px color(chathams);
+  
+          a {
+            background: transparent;
+          }
+  
+          > a:hover,
+          > a:focus {
+            background: transparent;
+          }
+        }
+      }
+  
+      .sub-menu {
+        padding: 0 rem(10px);
+        
+        > .menu-item {
+          margin-right: 0;
+
+          a {
+            text-transform: none;
+            text-align: left;
+  
+            &:hover,
+            &:focus {
+              background-color: color(linkwater);
+            }
+          }
+        }
       }
     }
   }

@@ -8,5 +8,10 @@
   padding-bottom: rem(20px);
   padding-top: rem(30px);
   border-top: 1px dashed white;
+
+  @include mq($until: S) {
+    border-top: 0 none;
+    padding-top: rem(20px);
+  }
 }
 

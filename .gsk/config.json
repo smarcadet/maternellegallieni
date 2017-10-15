@@ -1,7 +1,7 @@
 {
   "all": {
-    "optimize" : false,
-    "relax"    : false,
+    "optimize" : true,
+    "relax"    : true,
     "doc"      : false
   },
   "css" : {
@@ -11,6 +11,12 @@
     "postcss"     : {
       "autoprefixer": {
         "browsers": ["> 4%", "ie >= 8"]
+      },
+      "cssnano": {
+        "preset": [
+          "default",
+         {"discardComments": {"removeAll": true}}
+        ]
       }
     }
   },

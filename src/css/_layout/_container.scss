@@ -3,6 +3,10 @@
     overflow: hidden;
     @include clearfix;
     margin-bottom: rem(30px);
+
+    @include mq($until: S) {
+      margin-bottom: 0;
+    }
     
     &::after {
       display: none;
@@ -16,8 +20,17 @@
     min-height: 0;
     max-width: 1280px;
 
+
+    @include mq($until: S) {
+      padding: 0 rem(10px);
+    }
+
     .main {
       width: 64%;
+
+      @include mq($until: S) {
+        width: 100%;
+      }
     }
 
     .sidebar-primary {
@@ -39,6 +52,10 @@
     @include clearfix;
     position: relative;
     padding: rem(50px) 0;
+
+    @include mq($until: S) {
+      padding: rem(20px) 0;
+    }
 
     &::before {
       content: "";
@@ -74,7 +91,11 @@
     }
 
     ul, ol {
-      margin-top: 5px;
+      margin-top: rem(5px);
+
+      > li {
+        margin-bottom: rem(8px);
+      }
     }
   }
 
