@@ -21,6 +21,7 @@
 
     .menu-primary-items {
       background-color: color(linkwater);
+      border-bottom: 1px solid color(calypso);
 
       .menu-item {
         font-size: rem(20px);
@@ -55,6 +56,8 @@
       }
 
       .sub-menu {
+        min-width: 100%;
+
         > .menu-item {
           background: color(wildsand);
           padding-bottom: rem(6px);
@@ -81,7 +84,7 @@
     }
   
     .menu-primary-items {
-      display: flex;;
+      display: flex;
       min-height: rem(45px);
   
       > .menu-item {
@@ -120,6 +123,7 @@
   
       .sub-menu {
         padding: 0 rem(10px);
+        min-width: 100%;
         
         > .menu-item {
           margin-right: 0;

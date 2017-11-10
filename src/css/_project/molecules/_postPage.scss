@@ -1,0 +1,62 @@
+/// Post
+ //
+ //
+ // Styleguide molecules.post
+
+@at-root {
+  .post-template-default,
+  .category {
+    .primary-container {
+      @include clearfix;
+      position: relative;
+      padding: rem(50px) 0;
+    
+      @include mq($until: S) {
+        padding: rem(20px) 0 0;
+      }
+    
+      &::before {
+        content: "";
+        background: url(../img/school-pattern.jpg) repeat left top;
+        position: absolute;
+        top: 0;
+        left: -1000%;
+        right: -1000%;
+        bottom: 0;
+        display: block;
+        z-index: -1;
+        opacity: .9;
+      }
+
+      .main {
+        float: none;
+        margin: 0 auto;
+      }
+  
+      .post {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .post-template-default {
+    .post {
+      border: 0 none;
+    }
+  }
+
+  .category {
+    .post {
+      border-bottom: 1px dashed white;
+      margin-bottom: rem(20px);
+      padding-bottom: rem(20px);
+
+      &:last-child {
+        padding-left: 0;
+      }
+    }
+  }
+}
+

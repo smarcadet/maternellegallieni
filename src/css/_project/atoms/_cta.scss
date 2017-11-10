@@ -57,8 +57,12 @@
   }
 
   &--arrow {
+    position: relative;
+    padding-right: 35px;
+
     &::after {
       content: "";
+      position: absolute;
       display: inline-block;
       width: 10px;
       height: 10px;
@@ -66,14 +70,14 @@
       border: 2px solid color(fuego);
       border-bottom: 0 none;
       border-left: 0 none;
-      margin: 0 3px 0 5px;
+      margin: 4px 3px 0 5px;
       box-shadow: 3px -3px 0 0px color(codgray), 4px -4px 0 0px color(fuego);
       transition: margin .1s ease-in;
     }
 
     &:hover {
       &::after {
-        margin: 0 0 0 8px;
+        margin: 4px 0 0 8px;
       }
     }
 
@@ -95,7 +99,7 @@
       &::after {
         transform: rotate(135deg);
         float: left;
-        margin: -3px 15px 0 -5px;
+        margin: -3px 15px 0 10px;
         border-color: color(codgray);
         box-shadow: 3px -3px 0 0px color(wildsand), 4px -4px 0 0px color(codgray);
       }

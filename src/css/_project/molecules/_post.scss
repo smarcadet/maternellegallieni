@@ -147,11 +147,13 @@
 		}
 	}
 
-	.post:nth-of-type(2) {
-		padding-right: 2%;
+	@include mq($from: S) {
+		.post:nth-of-type(2) {
+			padding-right: 2%;
 
-		h2 {
-			font-size: rem(24px) !important;
+			h2 {
+				font-size: rem(24px) !important;
+			}
 		}
 	}
 

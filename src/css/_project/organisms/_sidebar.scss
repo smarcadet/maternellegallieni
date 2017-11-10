@@ -34,10 +34,15 @@
 
       @include mq($until: S) {
         box-shadow: none;
+        overflow: hidden;
 
         &::after,
         &::before {
           display: none;
+        }
+
+        .mg-decoBorder {
+          border: 1px solid color(scorpion);
         }
       }
 
