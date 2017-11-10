@@ -45,6 +45,10 @@
     .post {
       border: 0 none;
     }
+
+    .featured-image {
+      display: none;
+    }
   }
 
   .category {
@@ -55,6 +59,7 @@
 
       &:last-child {
         padding-left: 0;
+        padding-bottom: rem(20px);
       }
     }
   }
