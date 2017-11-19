@@ -4,7 +4,7 @@
  // Styleguide molecules.post
 
 @at-root {
-  .post-template-default,
+  [class*=template-default],
   .category {
     .primary-container {
       @include clearfix;
@@ -34,28 +34,32 @@
         margin: 0 auto;
       }
   
-      .post {
+      .post,
+      .page {
+        border: 0 none;
+        padding-left: 15px;
+        padding-right: 15px;
+
         &::before {
           display: none;
         }
       }
-    }
-  }
 
-  .post-template-default {
-    .post {
-      border: 0 none;
-    }
+      .featured-image {
+        display: none;
+      }
+  
+      .loop-container {
+        background-color: color(lilywhite);
+        box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+        margin: 0 rem(15px) rem(30px) rem(15px);
+        padding: rem(10px);
 
-    .featured-image {
-      display: none;
-    }
-
-    .loop-container {
-      background-color: color(lilywhite);
-      box-shadow: 0 0 5px rgba(0, 0, 0, .4);
-      margin: 0 rem(15px) rem(30px) rem(15px);
-      padding: rem(10px);
+        article {
+          background: transparent;
+          box-shadow: none;
+        }
+      }
     }
   }
 

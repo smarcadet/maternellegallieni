@@ -53,9 +53,9 @@
         border-top-right-radius: 0;
 
         @include mq($until: S) {
-          max-height: 160px;
+          max-height: 200px;
           position: absolute;
-          top: -160px; // compensate the top:160px of the parent container.
+          top: -200px; // compensate the top:160px of the parent container.
           right: 0;
           left: 0;
           padding-top: 1em;

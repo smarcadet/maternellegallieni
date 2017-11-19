@@ -35,4 +35,8 @@
 		<?php dynamic_sidebar('static_hobbies'); ?>
 	</div>
 
+	<div id="meal" class="mg-container-meal">
+		<?php dynamic_sidebar('static_meal'); ?>
+	</div>
+
 <?php get_footer(); ?>

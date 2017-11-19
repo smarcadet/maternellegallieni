@@ -42,7 +42,7 @@
   margin: 0;
   padding: 8px 16px;
   background: color(codgray);
-  font-family: $font-opensans-semibloditalic;
+  font-family: $font-opensans-semibolditalic;
   font-size: rem(15px);
   line-height: 1.2;
   color: color(fuego);
@@ -153,6 +153,14 @@
 
       &:hover {
         box-shadow: inset 0px -100px 0 color(regent);
+      }
+    }
+
+    &LightBlue {
+      box-shadow: inset 0px -4px 0 color(lilywhite);
+
+      &:hover {
+        box-shadow: inset 0px -100px 0 color(lilywhite);
       }
     }
 

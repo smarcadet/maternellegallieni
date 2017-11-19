@@ -3,4 +3,8 @@
     font-family: $font-roboto-regular;
     font-size: rem(16px);
   }
+  strong,
+  b {
+    font-family: $font-roboto-bold;
+  }
 }

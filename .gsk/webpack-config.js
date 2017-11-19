@@ -48,7 +48,7 @@ module.exports = {
   entry: entries,
   output: {
     path: DEST,
-    filename: '[name].js'
+    filename: 'scripts.js'
   },
   module: {
     loaders: [{
