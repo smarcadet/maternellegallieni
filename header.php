@@ -20,12 +20,24 @@
 					</a>
 				</h1>
 				<div class="mg-header-infos">
+					<?php
+						// query for the about page
+						$your_query = new WP_Query( 'pagename=adresse-ecole' );
+						// "loop" through query (even though it's just one page) 
+						while ( $your_query->have_posts() ) : $your_query->the_post();
+							the_content();
+						endwhile;
+						// reset post data (important!)
+						wp_reset_postdata();
+					?>
+					<!--
 					<p class="mg-header-infos-address">
 						<span>16 bvd Gallieni,</span>
 						<strong>Nogent-sur-Marne</strong>
 					</p>
 					<a class="mg-header-infos-number" href="tel:0148733679">01 48 73 19 68</a>
 					<a class="mg-header-infos-mail" href="mailto:direction@maternellegallieni.fr">direction@maternellegallieni.fr</a>
+					-->
 				</div>
 			</div>
 			<button id="toggle-navigation" class="toggle-navigation" name="toggle-navigation" aria-expanded="false">

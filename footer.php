@@ -8,8 +8,19 @@
 <footer id="site-footer" class="mg-footer" role="contentinfo">
   <div class="mg-footer-bottom">  
     <div class="max-width">
-      <p class="mg-footer-col">2017 &copy; maternelle gallieni<br>
-  Design, illustrations et code par <a href="http://www.marcasteph.com">marcasteph</a></p>
+      <p class="mg-footer-col">
+      <?php
+        // query for the about page
+        $your_query = new WP_Query( 'pagename=copyright' );
+        // "loop" through query (even though it's just one page) 
+        while ( $your_query->have_posts() ) : $your_query->the_post();
+        the_content();
+        endwhile;
+        // reset post data (important!)
+        wp_reset_postdata();
+      ?> 
+      &copy; Maternelle Gallieni<br>
+      Design, illustrations et code par <a href="http://www.marcasteph.com">marcasteph</a></p>
       <p class="mg-footer-col drawing"><img src="<?php bloginfo('stylesheet_directory'); ?>/src/assets/img/draw.jpg" alt="Cours d'école, jeux"></p>
     </div>
   </div>
