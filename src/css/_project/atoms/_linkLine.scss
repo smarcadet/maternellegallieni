@@ -29,6 +29,13 @@
     text-decoration: underline;
   }
 
+  &--noHover {
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
   &--lineThrough {
     &::before,
     &::after {
