@@ -13,8 +13,8 @@
 &-link {
   border: 0 none;
   margin: 0;
-  padding: 0;
-  padding-right: 20px;
+  padding: 10px 14px;
+  position: relative;
   background: color(picton);
   font-family: "opensans-semibold";
   font-size: rem(16px);
@@ -25,82 +25,34 @@
   text-transform: uppercase;
   text-decoration: none !important;
   text-align: left;
-  transition: padding .15s ease-in-out, background-color .15s ease-in-out;
+  transition: background-color .15s ease-in-out;
 
-  @include mq($until: L) {
-    font-size: rem(14px);
-    padding-right: 10px;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: 2px solid color(chathams);
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    height : 0;
+    width : 0;
+    border-top : 8px solid transparent;
+    border-bottom : 8px solid transparent;
+    border-left : 10px solid color(chathams);
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    margin-top: -8px;
   }
 
   &:hover {
-    padding-right: 10px;
     background-color: color(fuego);
-
-    abbr {
-      padding: 8px 10px 8px 20px;
-    }
-
-    @include mq($until: L) {
-      padding-right: 4px;
-
-      abbr {
-        padding: 5px 8px 5px 12px;
-      }
-    }
-
-    @include mq($until: S) {
-      abbr {
-        padding: 10px 8px 10px 12px;
-      }
-    }
-  }
-
-  abbr {
-    display: inline-block;
-    padding: 8px 10px;
-    margin-right: 10px;
-    background: color(chathams);
-    color: color(wildsand);
-    position: relative;
-    transition: padding .15s ease-in-out;
-    cursor: pointer;
-
-    &::before {
-      content: "";
-      background: color(chathams);
-      display: block;
-      width: 12px;
-      height: 12px;
-      position: absolute;
-      right: -4px;
-      top: 50%;
-      margin-top: -6px;
-      transform: rotate(45deg);
-
-      @include mq($until: L) {
-        width: 10px;
-        height: 10px;
-        margin-top: -5px;
-      }
-    }
-
-    @include mq($until: L) {
-      padding: 5px 8px;
-      margin-right: 7px;
-      font-size: rem(13px);
-
-      abbr {
-        padding: 5px 8px;
-      }
-    }
-
-    @include mq($until: S) {
-      padding: 10px 8px;
-
-      abbr {
-        padding: 10px 8px;
-      }
-    }
   }
 }
 

@@ -9,7 +9,7 @@
   <div class="mg-footer-bottom">  
     <div class="max-width">
       <p class="mg-footer-col">
-      <?php
+	    <?php
         // query for the about page
         $your_query = new WP_Query( 'pagename=copyright' );
         // "loop" through query (even though it's just one page) 

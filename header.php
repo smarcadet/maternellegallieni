@@ -30,14 +30,6 @@
 						// reset post data (important!)
 						wp_reset_postdata();
 					?>
-					<!--
-					<p class="mg-header-infos-address">
-						<span>16 bvd Gallieni,</span>
-						<strong>Nogent-sur-Marne</strong>
-					</p>
-					<a class="mg-header-infos-number" href="tel:0148733679">01 48 73 19 68</a>
-					<a class="mg-header-infos-mail" href="mailto:direction@maternellegallieni.fr">direction@maternellegallieni.fr</a>
-					-->
 				</div>
 			</div>
 			<button id="toggle-navigation" class="toggle-navigation" name="toggle-navigation" aria-expanded="false">

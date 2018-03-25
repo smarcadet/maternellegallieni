@@ -45,6 +45,13 @@
         }
       }
 
+      .post-content {
+        a:not(.more-link) {
+          color: color(japlaurel);
+          font-weight: normal;
+        }
+      }
+
       .featured-image {
         display: none;
       }
@@ -81,6 +88,16 @@
 
     .loop-container {
       margin: 0 rem(15px) rem(30px) rem(15px);
+    }
+  }
+
+  .archive.category {
+    .post {
+      border-bottom: 1px dashed color(codgray);
+
+      &:last-of-type {
+        border-bottom: 0;
+      }
     }
   }
 }

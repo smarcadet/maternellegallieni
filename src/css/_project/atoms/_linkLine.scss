@@ -23,10 +23,18 @@
   font-size: rem(18px);
   background: transparent;
   position: relative;
+  display: inline-block;
 
   &:hover,
   &:focus {
     text-decoration: underline;
+  }
+	
+  &--noHover {
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
   }
 
   &--noHover {
