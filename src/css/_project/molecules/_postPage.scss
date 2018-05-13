@@ -37,11 +37,31 @@
       .post,
       .page {
         border: 0 none;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 0;
+        padding-right: 0;
+
+        @include mq($from: S) {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
 
         &::before {
           display: none;
+        }
+
+        table {
+          width: 100%;
+          
+          td:first-of-type {
+            width: 30%;
+          }
+
+          @include mq($until: S) {
+            td {
+              display: block;
+              width: 100% !important;
+            }
+          }
         }
       }
 

@@ -40,5 +40,27 @@
     text-transform: uppercase;
     margin-bottom: rem(10px);
   }
+
+  &--line {
+    position: relative;
+    text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      margin-top: -1px;
+      right: -1000%;
+      left: -1000%;
+      border-bottom: 1px dashed black;
+    }
+
+    strong {
+      background-color: color(lilywhite);
+      display: inline-block;
+      padding: 0 rem(10px);
+      position: relative;
+    }
+  }
 }
 

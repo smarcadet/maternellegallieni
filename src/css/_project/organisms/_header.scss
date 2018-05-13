@@ -208,11 +208,16 @@
 			font-size: .85em;
 			text-decoration: underline;
 			font-style: italic;
+			display: block;
 
 			@include mq($until: S) {
 				font-size: 1em;
 				padding-top: rem(5px);
 				display: block;
+			}
+
+			@include mq($from: M) {
+				display: inline-block;
 			}
 		}
 	}

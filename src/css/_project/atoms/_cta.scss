@@ -40,7 +40,7 @@
 &-cta.#{$prefix}-cta {
   border: 0 none;
   margin: 0;
-  padding: 8px 16px;
+  padding: rem(8px) rem(16px);
   background: color(codgray);
   font-family: $font-opensans-semibolditalic;
   font-size: rem(15px);
@@ -188,6 +188,58 @@
 
     &:hover {
       background: darken(color(japlaurel), 10%);
+    }
+  }
+
+  &--blog {
+    background: url("../img/bg-blog-btn.jpg") no-repeat center top;
+    background-size: cover;
+    height: rem(120px);
+    border: 2px dashed black;
+    width: 100%;
+    text-align: center;
+    display: block;
+
+    &:hover,
+    &:focus {
+      background: url("../img/bg-blog-btn.jpg") no-repeat center top;
+      background-size: cover;
+      border-style: solid;
+
+      .#{$prefix}-cta {
+        background-color: black;
+
+        &::after {
+          margin: 4px 0 0 8px;
+        }
+      }
+    }
+
+    .#{$prefix}-cta {
+      top: rem(30px);
+      background: transparent;
+      position: relative;
+      z-index: 1;
+      color: color(wildsand);
+      font-size: rem(18px);
+      line-height: 1;
+      padding: 10px 16px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background-color: transparentize(black, .3);
+      }
+
+      &::after {
+        border-color: color(wildsand);
+        box-shadow: 3px -3px 0 0px color(codgray), 4px -4px 0 0px color(wildsand);
+      }
     }
   }
 }
